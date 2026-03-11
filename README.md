@@ -10,15 +10,19 @@ When the target branch for example ```main``` has no new commits since the creat
 The difference is how they affect the commit history.
  * Merge combienes two branches 
    Example: 
+    ```
     A---B---C--------M  (main)
         \          /
         D---E----     (feature)
+    ```
     the history keeps the original branching structure and shows when they have been merged.
 
  * Git Rebase moves commits from one branch on top of the other one, this creates a linear commit history unlike Merge where the branches split and merge thogheter.
 
-   Example: 
+   Example:
+    ``` 
     A---B---C---D'---E'
+    ```
     moves commits D and E ontop of C.
 
 3. How was the conflict resolved in your repository?
