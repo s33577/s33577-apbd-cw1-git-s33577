@@ -6,7 +6,7 @@ class Program {
         try
         {
             Console.WriteLine("Select Array size:  ");
-
+            Console.Write("Creatinggg conflict ");
             int size = Convert.ToInt32(Console.ReadLine());
             int[] array = new int[size];
             for (int i = 0; i < size; i++)
