@@ -19,6 +19,8 @@ class Program {
 
             double avg = CalculateAverage(array);
             Console.WriteLine($"Average: {avg}");
+            double max = CalculateMax(array);
+            Console.WriteLine($"Max: {max}");
         }
         catch (Exception e)
         {
@@ -44,6 +46,19 @@ class Program {
             sum += values[i];
         }
         return (double)sum / values.Length;
+    }
+
+    static double CalculateMax(int[] values)
+    {
+        int max = values[0];
+        for (int i = 0; i < values.Length; i++)
+        {
+            if (values[i] > max)
+            {
+                max = values[i];
+            }
+        }
+        return max;
     }
     
 }
