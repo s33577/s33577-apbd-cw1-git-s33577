@@ -3,8 +3,7 @@
 class Program {
     public static void Main(String[] args)
     {
-        Console.WriteLine("APBD task 2");
-        Console.WriteLine("Task 2");
+        Console.WriteLine("APBD task 2" + " Andrew Kotowiecki");
     }
     
 }
