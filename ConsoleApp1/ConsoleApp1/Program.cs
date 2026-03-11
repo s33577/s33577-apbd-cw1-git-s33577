@@ -3,7 +3,27 @@
 class Program {
     public static void Main(String[] args)
     {
-        Console.WriteLine("APBD task 2" + " Andrew Kotowiecki");
+        try
+        {
+            Console.WriteLine("Select Array size:  ");
+
+            int size = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[size];
+            for (int i = 0; i < size; i++)
+            {
+                Console.WriteLine("Enter number:  ");
+                array[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+
+
+            double avg = CalculateAverage(array);
+            Console.WriteLine($"Average: {avg}");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Error happened: " + e.Message);
+        }
         
     }
     static double CalculateAverage(int[] values)
