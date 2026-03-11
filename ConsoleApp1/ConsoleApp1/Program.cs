@@ -21,6 +21,8 @@ class Program {
             Console.WriteLine($"Average: {avg}");
             double max = CalculateMax(array);
             Console.WriteLine($"Max: {max}");
+            double min = CalculateMin(array);
+            Console.WriteLine($"Min: {min}");
         }
         catch (Exception e)
         {
@@ -68,6 +70,11 @@ class Program {
 
     static double CalculateMin(int[] values)
     {
+
+        if (values == null || values.Length == 0)
+        {
+            throw new ArgumentException("Array cannot be null or empty");
+        }
         int min = values[0];
         for (int i = 0; i < values.Length; i++)
         {
